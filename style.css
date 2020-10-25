@@ -1,18 +1,18 @@
-/*
-
-https://tk-assets.lambdaschool.com/44f6a520-b218-4ed1-910b-f4dc876cd1a6_sweet-eats-home-page.png
-
-***DO NOT ATTEMPT STRETCH UNTIL YOU ARE FINISHED WITH EVERYTHING ELSE!***
-
-Stretch Task: Fork your final work and see how much you can change the design without changing the HTML.  Try to transform the site by only using CSS selectors.
-
-Stretch Task: Look at CSS animations and see if you could integrate them on the navigation hovers.
-
-Stretch Task: Pick a navigation item and create a new page with the same header and footer as the home page.  Example: you could make a new page just for cookies.  Be creative and have fun coming up with your own unique content and styles. 
-
-*/
 * {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: transparent;
+  background: linear-gradient(to bottom, #d9a7c7, #fffcdc);
   color: #3C373B;
+  width: 95%;
+}
+
+a {
+  text-decoration: none;
 }
 
 h1 {
@@ -27,13 +27,43 @@ h2, h3, h4, h5, h6 {
   margin-bottom: 0;
   padding: 0 10px;
   font-size: 30px;
+  width: 95%;
+}
+
+h3 {
+  animation: blinkingText 1s infinite;
+            font-style: italic;
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            color: pink;
+            font-size: 45px;
+        }
+        @keyframes blinkingText {
+   
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: .5;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
 }
 
 p {
   font-size: 16px;
-  font-family: roboto;
+  font-family: 'Noto Sans', sans-serif;
   padding: 10px;
   line-height: 1.4;
+  width: 95%;
+}
+
+#headerImg img {
+  width: 50%;
+  margin-left: 25%;
 }
 
 img {
@@ -48,25 +78,24 @@ img {
   margin: 20px;
 }
 
-.container {
-  width: 600px;
-  margin: 0 auto;
+.container header nav {
+  display: flex;
+  justify-content: center;
 }
 
-.container header nav a {
+.container header nav a, footer a {
   background-color: #F87B99;
-  margin: 0 10px;
   border: 1px solid lightgray;
   padding: 20px;
-  display: inline-block;
   border-radius: 20px;
   color: white;
   text-decoration: none;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .container header nav a:hover {
-    background-color: white;
+    background-color: black;
     color: pink;
 }
 
@@ -77,26 +106,36 @@ img {
 .contact-section {
   border-top: 1px dashed black;
   padding: 20px 0;
+  justify-content: center;
+  width: 100%;
 }
 
 .contact-section h2 {
+  font-size: 50px;
+  text-align: center;
+  margin: 0% auto;
+}
+
+.contact-section h2, address {
   padding: 0;
-  margin: 0 0 10px 0;
+  text-align: center;
 }
 
 address {
   line-height: 2;
+  margin: 0% auto;
 }
 
 footer {
   width: 100%;
-  background: #F87B99;
+  /* background: #F87B99; */
   border-top: 1px dashed white;
 }
 
-footer .footer-content { 
-  margin: 0 auto; 
-  width: 600px;
+footer .footer-content {
+  margin: 0% auto;
+  width: 100%;
+  text-align: center;
 }
 
 footer .footer-content h3 {
@@ -104,14 +143,13 @@ footer .footer-content h3 {
   margin: 20px 0;
 }
 
-footer nav {
+footer .footer-content nav {
   display: flex;
+  justify-content: center;
 }
 
-footer a{
-  margin: 10px;
-  color: black;
-  text-decoration: underline;
+.footer-content nav a {
+  text-align: center;
 }
 
 footer nav a:first-child {
